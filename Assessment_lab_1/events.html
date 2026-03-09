@@ -125,6 +125,47 @@
         </div>
     </div>
 
+
+     <!-- dropdown -->
+    <div class="bg-white border-bottom shadow-sm py-3 sticky-top" id="events-list">
+        <div class="container-fluid px-4">
+            <div class="d-flex flex-wrap align-items-center justify-content-between gap-2">
+                <div class="d-flex flex-wrap gap-2" id="filterBtns">
+                    <button class="btn btn-primary btn-sm rounded-pill" onclick="setFilter(this)">All</button>
+                    <button class="btn btn-outline-secondary btn-sm rounded-pill" onclick="setFilter(this)"><i 
+                            class="bi bi-mic me-1"></i>Conference</button>
+                    <button class="btn btn-outline-secondary btn-sm rounded-pill" onclick="setFilter(this)"><i
+                            class="bi bi-cup-hot me-1"></i>Dinner</button>
+                    <button class="btn btn-outline-secondary btn-sm rounded-pill" onclick="setFilter(this)"><i
+                            class="bi bi-display me-1"></i>Exhibition</button>
+                    <button class="btn btn-outline-secondary btn-sm rounded-pill" onclick="setFilter(this)"><i
+                            class="bi bi-people me-1"></i>Networking &amp; Social</button>
+                    <button class="btn btn-outline-secondary btn-sm rounded-pill" onclick="setFilter(this)"><i
+                            class="bi bi-building me-1"></i>Site Visit</button>
+                    <button class="btn btn-outline-secondary btn-sm rounded-pill" onclick="setFilter(this)"><i
+                            class="bi bi-tools me-1"></i>Technical Meeting</button>
+                    <button class="btn btn-outline-secondary btn-sm rounded-pill" onclick="setFilter(this)"><i
+                            class="bi bi-camera-video me-1"></i>Webinars/Online</button>
+                </div>
+                <select class="form-select form-select-sm w-auto rounded-pill">
+                    <option>All Branches</option>
+                    <option>Aberdeen</option>
+                    <option>Brazil</option>
+                    <option>China</option>
+                    <option>Eastern Mediterranean</option>
+                    <option>London &amp; South of England</option>
+                    <option>Malaysia – Kuala Lumpur</option>
+                    <option>Middle East</option>
+                    <option>North of England</option>
+                    <option>Norway</option>
+                    <option>Perth</option>
+                    <option>Singapore</option>
+                    <option>US (Houston)</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         function setFilter(el) {
