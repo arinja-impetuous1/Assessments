@@ -1,0 +1,125 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #e6dcc6;
+}
+
+/* HEADER */
+header {
+  background: #8fa26a;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* CART */
+.cart-container { position: relative; }
+
+.cart-icon {
+  background: #a8b58a;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.cart-dropdown {
+  position: absolute;
+  right: 0;
+  top: 45px;
+  width: 350px;
+  background: #f5edd6;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+  display: none;
+  z-index: 999;
+}
+
+/* 🔥 TEXT BLACK FIX */
+.cart-dropdown,
+.cart-dropdown * {
+  color: black !important;
+}
+
+.cart-header {
+  padding: 12px;
+  background: #e0d4b7;
+  font-weight: bold;
+}
+
+/* CART ITEM */
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  align-items: center;
+}
+
+.cart-info {
+  flex: 1;
+}
+
+/* QTY */
+.qty {
+  display: flex;
+  gap: 5px;
+  margin-top: 5px;
+}
+
+.qty button {
+  padding: 2px 6px;
+  cursor: pointer;
+}
+
+/* REMOVE */
+.remove-btn {
+  color: red;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* FOOTER */
+.cart-footer {
+  padding: 12px;
+}
+
+.buy-btn {
+  width: 100%;
+  background: #facc15;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  font-weight: bold;
+}
+
+/* PRODUCTS */
+.container {
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.card {
+  background: #f0e6c8;
+  border-radius: 10px;
+}
+
+.card img {
+  height: 150px;
+  object-fit: contain;
+}
+
+.card-body {
+  padding: 10px;
+}
+
+.card-buttons {
+  padding: 10px;
+}
