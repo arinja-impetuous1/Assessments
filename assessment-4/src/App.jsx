@@ -15,4 +15,15 @@ const App = () => {
     useEffect(() => {
     localStorage.setItem('tasks', JSON.stringify(tasks));
   }, [tasks]);
+
+    const addTask = () => {
+    if (input.trim() === '') return;
+    setTasks([...tasks, input]);
+    setInput('');
+  };
+
+  const deleteTask = (index) => {
+    const newTasks = tasks.filter((_, i) => i !== index);
+    setTasks(newTasks);
+  };
 }
