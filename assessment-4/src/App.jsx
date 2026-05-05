@@ -11,4 +11,8 @@ const App = () => {
       setTasks(savedTasks);
     }
   }, []);
+
+    useEffect(() => {
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+  }, [tasks]);
 }
