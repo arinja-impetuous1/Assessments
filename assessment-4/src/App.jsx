@@ -1,33 +1,50 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
+
+//props(child component)
+function TaskList({ tasks, deleteTask }) {
+  return (
+    <ul>
+      {tasks.map((task, index) => (
+        <li key={index}>
+          {task}
+          <button onClick={() => deleteTask(index)}>Delete</button>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
 
 const App = () => {
 
-    const [tasks, setTasks] = useState([]);
+  // State + useState
+  const [tasks, setTasks] = useState([]);
   const [input, setInput] = useState('');
 
-    useEffect(() => {
-    const savedTasks = JSON.parse(localStorage.getItem('tasks'));
-    if (savedTasks) {
-      setTasks(savedTasks);
-    }
+  // useEffect (Load)
+  useEffect(() => {
+    const savedTasks = JSON.parse(localStorage.getItem('tasks')) || [];
+    setTasks(savedTasks);
   }, []);
 
-    useEffect(() => {
+  // useEffect (Save)
+  useEffect(() => {
     localStorage.setItem('tasks', JSON.stringify(tasks));
   }, [tasks]);
 
-    const addTask = () => {
+  
+  const addTask = () => {
     if (input.trim() === '') return;
     setTasks([...tasks, input]);
     setInput('');
   };
 
+  
   const deleteTask = (index) => {
-    const newTasks = tasks.filter((_, i) => i !== index);
-    setTasks(newTasks);
+    setTasks(tasks.filter((_, i) => i !== index));
   };
 
-   return (
+  return (
     <div style={{ textAlign: 'center', marginTop: '50px' }}>
       <h1>Task Manager</h1>
 
